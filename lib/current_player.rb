@@ -9,14 +9,9 @@ def turn_count(board)
 end
 
 def current_player(board)
-  player = "X"
-  board.each do |pos|
-    board[pos] = player
-    if player == "X"
-      player = "O"
-    else
-      player = "X"
-    end
+  if turn_count(board) % 2 == 0
+    return "X"
+  else
+    return "O"
   end
-  return board
 end
