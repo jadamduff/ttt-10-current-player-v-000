@@ -3,6 +3,7 @@ def turn_count(board)
   board.each do |pos|
     if pos != '' && pos != ' '
       counter += 1
+    end
   end
   return counter
 end
